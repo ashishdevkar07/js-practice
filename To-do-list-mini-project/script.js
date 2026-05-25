@@ -1,41 +1,47 @@
+// Selecting elements from HTML
 let input = document.querySelector("#newItem")
 let bton = document.querySelector("#btn")
 let list = document.querySelector("#addlist")
 let counter = document.querySelector("#counter")
 
+// Function to update task counter
 function updatecounter(){
-            let Totaltasks = list.querySelectorAll("li").length
-            counter.innerHTML = "Total Tasks : " +Totaltasks
-        }
+    let Totaltasks = list.querySelectorAll("li").length
+    counter.innerHTML = "Total Tasks : " + Totaltasks
+}
 
-bton.addEventListener("click" , function(){
+// Adding task when button is clicked
+bton.addEventListener("click", function(){
     let newtask = input.value
 
-    if (newtask == ""){
-        alert("Error, please type the task first");
+    // Validation - empty input check
+    if(newtask == ""){
+        alert("Error, please type the task first")
     } else {
+        // Creating new list item
         let newItem = document.createElement("li")
         newItem.innerHTML = newtask
-        list.appendChild(newItem)
-        input.value = ""
 
-       updatecounter()
-        
+        // Creating delete button for this task
         let deletebtn = document.createElement("button")
         deletebtn.innerHTML = "delete"
 
-        deletebtn.addEventListener("click" , function(){
+        // Removing task when delete is clicked
+        deletebtn.addEventListener("click", function(){
             newItem.remove()
             updatecounter()
         })
 
+        // Adding delete button inside task
         newItem.appendChild(deletebtn)
 
+        // Adding task to the list
         list.appendChild(newItem)
 
+        // Clearing input box
         input.value = ""
 
-        
+        // Updating counter
+        updatecounter()
     }
 })
-
