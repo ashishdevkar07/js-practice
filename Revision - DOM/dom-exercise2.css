@@ -1,0 +1,58 @@
+body {
+    background-color: antiquewhite;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    background-color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: aquamarine;
+}
+
+#button1 {
+    border-radius: 6px;
+    border-color: white;
+    padding: 10px 30px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: cadetblue;
+}
+
+#button2 {
+    border-radius: 6px;
+    border-color: white;
+    padding: 10px 30px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: cadetblue;
+}
+
+#button3 {
+    border-radius: 6px;
+    border-color: white;
+    padding: 10px 30px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: cadetblue;
+}
+
+#results {
+    padding: 10px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#para{
+    background-color: beige;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    
+}
